@@ -50,9 +50,10 @@ on answers.splunk.com and I will most likely answer it.
 Github repository: https://github.com/M-u-S/TA-EDFS
 
 **Things to-do / Future ideas**
-Add SSL Support
-Allow multiple IP's to connect
-¯\_(ツ)_/¯  
+
+- Add SSL Support
+- Allow multiple IP's to connect
+- anything else ? `¯\_(ツ)_/¯`  
 
 **Version**
 
