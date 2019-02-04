@@ -38,6 +38,9 @@ Configure the EDFS inputs using the Splunk web in the inputs section. You need
 to configure the Splunk user that will be authenticated, the port Splunk will
 listen on, and the IP that is allowed to connect to the port.
 
+Uncomment the options in `web.conf`, this had to be done to pass the Splunk
+Appinspect test.
+
 **Debug**
 
 Currently there is no debug option in the app, but the app logs all connections
