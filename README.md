@@ -52,6 +52,9 @@ This is an open source project, no support provided, but you can ask questions
 on answers.splunk.com and I will most likely answer it.
 Github repository: https://github.com/M-u-S/TA-EDFS
 
+I validate all my apps with appinspect and the log can be found in the README 
+folder of each app.
+
 **Things to-do / Future ideas**
 
 - Add SSL Support
