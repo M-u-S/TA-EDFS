@@ -1,7 +1,7 @@
 """ dummy place holder modular input to enable Embedded Dashboards for Splunk config """
 __author__ = 'Michael Uschmann / MuS'
 __date__ = 'Copyright $Oct 25, 2018 11:00:00 AM$'
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 import sys
 import os
@@ -91,8 +91,8 @@ def run_main():
     """ get the config """
     config = get_config()
     #process_string = '%s/bin/splunk cmd %s/00_start.sh %s %s %s' % (SPLUNK_HOME, myPath, config['username'], config['port'], config['connect_from'])
-    process_string = 'export NODE_PATH="%s"; %s/bin/splunk cmd node %s/dash-proxy.js %s %s %s' % (myPath, SPLUNK_HOME, myPath, config['username'], config['port'], config['connect_from'])
-    subprocess.Popen(process_string, shell=True) 
+    process_string = 'export NODE_PATH="$NODE_PATH:%s"; %s/bin/splunk cmd node %s/dash-proxy.js %s %s %s' % (myPath, SPLUNK_HOME, myPath, config['username'], config['port'], config['connect_from'])
+    subprocess.Popen(process_string, shell=True)
 
 if __name__ == '__main__':
     """ Script must implement these args: scheme, validate-arguments """
