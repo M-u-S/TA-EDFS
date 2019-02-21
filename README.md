@@ -46,13 +46,19 @@ Appinspect test.
 Currently there is no debug option in the app, but the app logs all connections
 into 'index=_internal sourcetype=splunkd_edfs_access'
 
+**Known issues**
+- the script some times continues to run, even when the input is disabled
+- to prevent issues around the cookies passed by Splunk, it is best to run
+  private browser windows if you are testing on your computer.
+
+
 **Support**
 
 This is an open source project, no support provided, but you can ask questions
 on answers.splunk.com and I will most likely answer it.
 Github repository: https://github.com/M-u-S/TA-EDFS
 
-I validate all my apps with appinspect and the log can be found in the README 
+I validate all my apps with appinspect and the log can be found in the README
 folder of each app.
 
 **Things to-do / Future ideas**
