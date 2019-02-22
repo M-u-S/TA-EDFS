@@ -63,6 +63,9 @@ Github repository: https://github.com/M-u-S/TA-EDFS
 I validate all my apps with Appinspect and the log can be found in the README
 folder of each app.
 
+Running Splunk on Windows? Good Luck, not my problem.
+
+
 **Things to-do / Future ideas**
 
 - Add SSL Support
