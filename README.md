@@ -13,9 +13,9 @@ environment is secured.
 The app will provide new TCP port[s] that one can connect to, and automagically
 gets authenticated as the configured user in Splunk.
 
-Please be aware this app sets 'trustedIP=127.0.0.1' in 'server.conf'. Please
+Please be aware this app sets `trustedIP=127.0.0.1` in `server.conf`. Please
 read http://docs.splunk.com/Documentation/Splunk/latest/Admin/Serverconf#General_Server_Configuration
-to understand this option. The configured options in 'web.conf' are explained
+to understand this option. The configured options in `web.conf` are explained
 in detail in the blog post linked at the top.
 
 The configured EDFS dashboards are only accessible from the configured IP.
@@ -29,7 +29,11 @@ restart Splunk.
 
 **Configure:**
 
-Copy 'default/inputs.conf' to 'local/' and use the provided stanza as template.
+Copy `default/web.conf` and `default/server.conf` to the `local` folder and
+uncomment the options in `web.conf` and `server.conf`, this had to be done to
+pass the Splunk Appinspect test.
+
+Copy `default/inputs.conf` to `local/` and use the provided stanza as template.
 Configure the Splunk user with the least possible permissions (Make everything
 read-only ), make a separate app, add the dashboard you want to show as the
 default dashboard for the app.
@@ -38,13 +42,11 @@ Configure the EDFS inputs using the Splunk web in the inputs section. You need
 to configure the Splunk user that will be authenticated, the port Splunk will
 listen on, and the IP that is allowed to connect to the port.
 
-Uncomment the options in `web.conf`, this had to be done to pass the Splunk
-Appinspect test.
 
 **Debug**
 
 Currently there is no debug option in the app, but the app logs all connections
-into 'index=_internal sourcetype=splunkd_edfs_access'
+into `index=_internal sourcetype=splunkd_edfs_access`
 
 **Known issues**
 - the script some times continues to run, even when the input is disabled
@@ -58,7 +60,7 @@ This is an open source project, no support provided, but you can ask questions
 on answers.splunk.com and I will most likely answer it.
 Github repository: https://github.com/M-u-S/TA-EDFS
 
-I validate all my apps with appinspect and the log can be found in the README
+I validate all my apps with Appinspect and the log can be found in the README
 folder of each app.
 
 **Things to-do / Future ideas**
@@ -69,4 +71,5 @@ folder of each app.
 
 **Version**
 
-`29. October 2018 : 0.1.0 / Initial`
+`29. Oct 2018 : 0.1.0 / Initial`
+`21. Feb 2019 : 0.1.1 / Fixed some issues`
